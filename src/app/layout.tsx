@@ -13,10 +13,17 @@ const syne = Syne({
   weight: ["400", "500", "600", "700", "800"],
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://onq.app";
+
+const title = "OnQ — The Operating System for Nightlife";
+const description =
+  "Discover events, buy tickets, book VIP tables, manage memberships, and experience nightlife in one app.";
+
 export const metadata: Metadata = {
-  title: "OnQ — The Operating System for Nightlife",
-  description:
-    "One App. Every Night Out. Discover events, book VIP tables, manage memberships, skip lines, and experience nightlife like never before.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
   keywords: [
     "nightlife",
     "VIP booking",
@@ -25,10 +32,30 @@ export const metadata: Metadata = {
     "memberships",
     "nightclub app",
   ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "OnQ — The Operating System for Nightlife",
-    description: "One App. Every Night Out.",
+    title,
+    description,
+    url: "/",
+    siteName: "OnQ",
     type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "OnQ — The Operating System for Nightlife",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/og-image.png"],
   },
 };
 
