@@ -1,20 +1,20 @@
 const footerLinks = {
   Product: [
-    { label: "For Guests", href: "#consumers" },
-    { label: "For Venues", href: "#venues" },
-    { label: "Memberships", href: "#memberships" },
-    { label: "AI Marketing", href: "#compare" },
+    { label: "For Guests", href: "/#consumers" },
+    { label: "For Venues", href: "/#venues" },
+    { label: "Memberships", href: "/#memberships" },
+    { label: "AI Marketing", href: "/#compare" },
   ],
   Company: [
-    { label: "About", href: "#" },
-    { label: "Careers", href: "#" },
-    { label: "Press", href: "#" },
-    { label: "Contact", href: "#consultation" },
+    { label: "About", href: "/#" },
+    { label: "Careers", href: "/#" },
+    { label: "Press", href: "/#" },
+    { label: "Contact", href: "/#consultation" },
   ],
   Legal: [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
-    { label: "Cookie Policy", href: "#" },
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms of Service", href: "/#" },
+    { label: "Cookie Policy", href: "/#" },
   ],
 };
 

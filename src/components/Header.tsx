@@ -5,10 +5,10 @@ import { useState, useEffect } from "react";
 import { Button } from "./ui/Button";
 
 const navLinks = [
-  { label: "For Guests", href: "#consumers" },
-  { label: "For Venues", href: "#venues" },
-  { label: "Memberships", href: "#memberships" },
-  { label: "Why OnQ", href: "#compare" },
+  { label: "For Guests", href: "/#consumers" },
+  { label: "For Venues", href: "/#venues" },
+  { label: "Memberships", href: "/#memberships" },
+  { label: "Why OnQ", href: "/#compare" },
 ];
 
 export function Header() {
@@ -54,7 +54,7 @@ export function Header() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between relative">
-          <a href="#" className="relative z-10 bg-transparent">
+          <a href="/" className="relative z-10 bg-transparent">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/logo.png"
@@ -78,10 +78,10 @@ export function Header() {
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost" size="sm" href="#download">
+            <Button variant="ghost" size="sm" href="/#download">
               Download App
             </Button>
-            <Button variant="primary" size="sm" href="#consultation">
+            <Button variant="primary" size="sm" href="/#consultation">
               Book a Consultation
             </Button>
           </div>
@@ -128,14 +128,14 @@ export function Header() {
                   <div className="flex flex-col gap-3 pt-4 mt-2 border-t border-white/10">
                     <Button
                       variant="secondary"
-                      href="#download"
+                      href="/#download"
                       onClick={() => setMobileOpen(false)}
                     >
                       Download App
                     </Button>
                     <Button
                       variant="primary"
-                      href="#consultation"
+                      href="/#consultation"
                       onClick={() => setMobileOpen(false)}
                     >
                       Book a Consultation
