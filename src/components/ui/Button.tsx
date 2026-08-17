@@ -23,10 +23,10 @@ export function Button({
 
   const variants = {
     primary:
-      "bg-accent text-black hover:bg-accent/90 neon-glow hover:scale-[1.02] active:scale-[0.98]",
+      "bg-accent text-black hover:bg-[#9aebf5] neon-glow hover:scale-[1.02] active:scale-[0.98]",
     secondary:
-      "glass text-white hover:bg-white/10 border border-white/20 hover:border-accent/50",
-    ghost: "text-muted hover:text-white hover:bg-white/5",
+      "bg-accent/10 text-accent border border-accent/35 hover:bg-accent/20 hover:border-accent/60",
+    ghost: "text-muted hover:text-accent hover:bg-accent/10",
   };
 
   const sizes = {

@@ -2,11 +2,13 @@
 
 import { motion } from "framer-motion";
 import { PhoneMockup } from "./ui/PhoneMockup";
+import { Button } from "./ui/Button";
 
 export function DownloadSection() {
   return (
-    <section id="download" className="py-24 section-gradient relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(126,226,240,0.1),transparent_60%)]" />
+    <section id="download" className="py-24 section-gradient relative overflow-hidden scroll-mt-28">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(109,221,235,0.16),transparent_60%)]" />
+      <div className="absolute bottom-10 left-10 w-64 h-64 bg-accent/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -16,22 +18,22 @@ export function DownloadSection() {
             viewport={{ once: true }}
             className="text-center lg:text-left"
           >
-            <p className="text-accent text-sm tracking-[0.2em] uppercase mb-4">
-              Download OnQ
+            <p className="text-accent text-sm tracking-[0.25em] uppercase mb-4">
+              Get OnQ
             </p>
-            <h2 className="font-[family-name:var(--font-syne)] text-3xl md:text-5xl font-bold mb-4">
-              Your Next Night Out{" "}
-              <span className="gradient-text">Starts Here</span>
+            <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl font-semibold mb-4">
+              Your next membership{" "}
+              <span className="gradient-text italic">starts here</span>
             </h2>
-            <p className="text-muted text-lg mb-10 max-w-md mx-auto lg:mx-0">
-              Download OnQ and put your entire nightlife experience in your
-              pocket.
+            <p className="text-muted text-lg mb-8 max-w-md mx-auto lg:mx-0">
+              Download OnQ and carry exclusive access, pop-up events, and fast
+              entry in one place.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6">
               <a
                 href="#"
-                className="inline-flex items-center gap-3 glass-strong rounded-2xl px-6 py-4 hover:bg-white/10 transition-all duration-300 group"
+                className="inline-flex items-center gap-3 glass-strong rounded-2xl px-6 py-4 hover:bg-accent/15 hover:border-accent/40 transition-all duration-300 group"
               >
                 <svg
                   className="w-8 h-8"
@@ -50,7 +52,7 @@ export function DownloadSection() {
 
               <a
                 href="#"
-                className="inline-flex items-center gap-3 glass-strong rounded-2xl px-6 py-4 hover:bg-white/10 transition-all duration-300 group"
+                className="inline-flex items-center gap-3 glass-strong rounded-2xl px-6 py-4 hover:bg-accent/15 hover:border-accent/40 transition-all duration-300 group"
               >
                 <svg
                   className="w-8 h-8"
@@ -67,21 +69,25 @@ export function DownloadSection() {
                 </div>
               </a>
             </div>
+
+            <Button variant="ghost" href="#contact">
+              Or book a demo →
+            </Button>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="flex justify-center"
+            className="flex justify-center lg:justify-end"
           >
-            <div className="relative">
-              <div className="absolute inset-0 bg-accent/15 blur-[80px] rounded-full" />
+            <div className="relative py-8 px-4">
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] rounded-full bg-accent/20 blur-[90px] pointer-events-none" />
               <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                animate={{ y: [0, -12, 0] }}
+                transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
               >
-                <PhoneMockup screen="splash" size="lg" />
+                <PhoneMockup screen="discover" size="xl" glow eager />
               </motion.div>
             </div>
           </motion.div>

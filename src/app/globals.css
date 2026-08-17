@@ -1,14 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #000000;
+  /* OnQ Q cyan from logo */
+  --q: #6dddeb;
+  --q-soft: #9aebf5;
+  --q-deep: #1a8a9c;
+  --q-ink: #042028;
+
+  --background: #02080c;
   --foreground: #ffffff;
-  --accent: #7ee2f0;
-  --accent-dim: #4db8c7;
-  --accent-glow: rgba(126, 226, 240, 0.35);
-  --surface: rgba(255, 255, 255, 0.04);
-  --surface-border: rgba(255, 255, 255, 0.08);
-  --muted: rgba(255, 255, 255, 0.55);
+  --accent: var(--q);
+  --accent-dim: #3bb8c9;
+  --accent-glow: rgba(109, 221, 235, 0.4);
+  --surface: rgba(109, 221, 235, 0.06);
+  --surface-border: rgba(109, 221, 235, 0.16);
+  --muted: rgba(200, 235, 242, 0.62);
 }
 
 @theme inline {
@@ -20,7 +26,7 @@
   --color-surface: var(--surface);
   --color-surface-border: var(--surface-border);
   --font-sans: var(--font-inter);
-  --font-display: var(--font-syne);
+  --font-display: var(--font-cormorant);
 }
 
 * {
@@ -36,6 +42,11 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, sans-serif;
   overflow-x: hidden;
+  background-image:
+    radial-gradient(ellipse 90% 50% at 50% -10%, rgba(109, 221, 235, 0.14), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 30%, rgba(58, 184, 201, 0.08), transparent 50%),
+    radial-gradient(ellipse 50% 35% at 0% 80%, rgba(109, 221, 235, 0.07), transparent 45%);
+  background-attachment: fixed;
 }
 
 ::selection {
@@ -44,24 +55,32 @@ body {
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(109, 221, 235, 0.05);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(109, 221, 235, 0.14);
 }
 
 .glass-strong {
-  background: rgba(255, 255, 255, 0.06);
+  background: linear-gradient(
+    160deg,
+    rgba(109, 221, 235, 0.1) 0%,
+    rgba(109, 221, 235, 0.04) 45%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(109, 221, 235, 0.22);
+  box-shadow:
+    0 0 40px rgba(109, 221, 235, 0.06),
+    inset 0 1px 0 rgba(154, 235, 245, 0.12);
 }
 
 .neon-glow {
   box-shadow:
-    0 0 20px var(--accent-glow),
-    0 0 60px rgba(126, 226, 240, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 0 24px var(--accent-glow),
+    0 0 70px rgba(109, 221, 235, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 .text-glow {
@@ -69,7 +88,7 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, var(--accent) 100%);
+  background: linear-gradient(135deg, #ffffff 10%, var(--q-soft) 45%, var(--q) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -77,36 +96,56 @@ body {
 
 .hero-gradient {
   background:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(126, 226, 240, 0.15), transparent),
-    radial-gradient(ellipse 60% 40% at 80% 60%, rgba(126, 226, 240, 0.08), transparent),
-    radial-gradient(ellipse 40% 30% at 20% 80%, rgba(126, 226, 240, 0.05), transparent),
-    #000000;
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(109, 221, 235, 0.22), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 60%, rgba(109, 221, 235, 0.12), transparent),
+    radial-gradient(ellipse 40% 30% at 20% 80%, rgba(58, 184, 201, 0.1), transparent),
+    #02080c;
 }
 
 .section-gradient {
-  background: linear-gradient(180deg, #000 0%, #050508 50%, #000 100%);
+  background: linear-gradient(
+    180deg,
+    #02080c 0%,
+    #04141a 40%,
+    #031016 70%,
+    #02080c 100%
+  );
 }
 
 .grid-bg {
   background-image:
-    linear-gradient(rgba(126, 226, 240, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(126, 226, 240, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(109, 221, 235, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(109, 221, 235, 0.055) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 @keyframes pulse-glow {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.8; }
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
 
 .animate-float {
@@ -125,7 +164,7 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(126, 226, 240, 0.4),
+    rgba(109, 221, 235, 0.5),
     transparent
   );
   background-size: 200% 100%;
@@ -146,4 +185,163 @@ body {
 }
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+.card-shine {
+  position: absolute;
+  inset: -20%;
+  background: linear-gradient(
+    115deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.08) 42%,
+    rgba(180, 245, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0.1) 58%,
+    transparent 70%
+  );
+  mix-blend-mode: screen;
+  animation: card-shine-sweep 4.5s ease-in-out infinite;
+  transform: translateX(-30%);
+}
+
+@keyframes card-shine-sweep {
+  0%,
+  20% {
+    transform: translateX(-40%) skewX(-12deg);
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  70%,
+  100% {
+    transform: translateX(40%) skewX(-12deg);
+    opacity: 0;
+  }
+}
+
+/* 3D iPhone mockup */
+.phone-3d {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.phone-3d-tilted {
+  transform: rotateY(-18deg) rotateX(8deg) rotateZ(2deg);
+  transform-style: preserve-3d;
+}
+
+.phone-3d-glow {
+  filter: drop-shadow(0 0 28px rgba(109, 221, 235, 0.35));
+}
+
+.phone-3d-shadow {
+  position: absolute;
+  left: 8%;
+  right: 2%;
+  bottom: -6%;
+  height: 18%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.65) 0%,
+    transparent 70%
+  );
+  filter: blur(18px);
+  transform: translateZ(-40px) rotateX(80deg) scale(1.05);
+  pointer-events: none;
+}
+
+.phone-3d-body {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.phone-3d-edge {
+  position: absolute;
+  inset: 2% -3% 2% auto;
+  width: 10%;
+  border-radius: 2rem;
+  background: linear-gradient(
+    180deg,
+    #5a5a62 0%,
+    #2a2a30 18%,
+    #1a1a1e 50%,
+    #2e2e34 82%,
+    #4a4a52 100%
+  );
+  transform: translateZ(-14px) rotateY(18deg);
+  box-shadow: inset -2px 0 4px rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+}
+
+.phone-3d-bezel {
+  position: relative;
+  border-radius: 2.35rem;
+  padding: 0.55rem;
+  background: linear-gradient(
+    145deg,
+    #3a3a42 0%,
+    #111114 22%,
+    #0a0a0c 55%,
+    #1c1c22 78%,
+    #4a4a55 100%
+  );
+  box-shadow:
+    0 28px 50px rgba(0, 0, 0, 0.55),
+    0 10px 20px rgba(0, 0, 0, 0.35),
+    0 0 40px rgba(109, 221, 235, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.06),
+    inset 1px 0 0 rgba(255, 255, 255, 0.08);
+  transform: translateZ(0);
+}
+
+.phone-3d-island {
+  position: absolute;
+  top: 1.05rem;
+  left: 50%;
+  z-index: 3;
+  width: 28%;
+  height: 1.15rem;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: #050506;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.phone-3d-island::after {
+  content: "";
+  position: absolute;
+  right: 18%;
+  top: 50%;
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 999px;
+  transform: translateY(-50%);
+  background: radial-gradient(circle at 35% 35%, #6dddeb, #0a3040 70%);
+  box-shadow: 0 0 6px rgba(109, 221, 235, 0.55);
+}
+
+.phone-3d-screen {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.85rem;
+  background: #000;
+  isolation: isolate;
+}
+
+.phone-3d-glass {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    125deg,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.04) 22%,
+    transparent 42%,
+    transparent 68%,
+    rgba(109, 221, 235, 0.1) 100%
+  );
+  mix-blend-mode: screen;
 }

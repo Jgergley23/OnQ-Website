@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Syne } from "next/font/google";
+import { Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -7,30 +7,31 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const syne = Syne({
-  variable: "--font-syne",
+const display = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://onq.app";
 
-const title = "OnQ — The Operating System for Nightlife";
+const title = "OnQ — Access Reserved";
 const description =
-  "Discover events, buy tickets, book VIP tables, manage memberships, and experience nightlife in one app.";
+  "Exclusive membership. Always on the list. A lifestyle brand that keeps you active day and night.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title,
   description,
   keywords: [
-    "nightlife",
-    "VIP booking",
-    "event tickets",
-    "venue management",
-    "memberships",
-    "nightclub app",
+    "nightlife membership",
+    "VIP access",
+    "exclusive events",
+    "pop-up events",
+    "fast entry",
+    "lifestyle membership",
   ],
   alternates: {
     canonical: "/",
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "OnQ — The Operating System for Nightlife",
+        alt: "OnQ — Access Reserved",
       },
     ],
   },
@@ -65,7 +66,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${syne.variable} h-full`}>
+    <html lang="en" className={`${inter.variable} ${display.variable} h-full`}>
       <body className="min-h-full antialiased">{children}</body>
     </html>
   );

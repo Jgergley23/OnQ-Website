@@ -39,7 +39,7 @@ export function ConsultationForm() {
 
   return (
     <section id="consultation" className="py-24 relative">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(126,226,240,0.08),transparent_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(109,221,235,0.14),transparent_70%)]" />
 
       <div className="max-w-3xl mx-auto px-6 relative">
         <motion.div
@@ -48,16 +48,16 @@ export function ConsultationForm() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <p className="text-accent text-sm tracking-[0.2em] uppercase mb-4">
-            Get Started
+          <p className="text-accent text-sm tracking-[0.25em] uppercase mb-4">
+            Venue Contact
           </p>
-          <h2 className="font-[family-name:var(--font-syne)] text-3xl md:text-5xl font-bold mb-4">
-            Ready To Modernize{" "}
-            <span className="gradient-text">Your Venue?</span>
+          <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-5xl font-semibold mb-4">
+            Contact{" "}
+            <span className="gradient-text italic">Us</span>
           </h2>
           <p className="text-muted text-lg">
-            Book a free consultation with our team and discover how OnQ can
-            transform your business.
+            Tell us about your venue. We&apos;ll set a short meeting and show
+            what fits—including Brand Pilot if you want marketing support.
           </p>
         </motion.div>
 
@@ -84,12 +84,11 @@ export function ConsultationForm() {
                   />
                 </svg>
               </div>
-              <h3 className="font-[family-name:var(--font-syne)] text-2xl font-bold mb-2">
-                Consultation Requested!
+              <h3 className="font-[family-name:var(--font-display)] text-2xl font-semibold mb-2">
+                Message sent
               </h3>
               <p className="text-muted">
-                Our team will reach out within 24 hours to schedule your
-                consultation.
+                Our team will reach out within 24 hours.
               </p>
             </div>
           ) : (
@@ -101,7 +100,7 @@ export function ConsultationForm() {
                     required
                     type="text"
                     name="name"
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent/50 transition-colors"
+                    className="w-full bg-accent/5 border border-accent/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent/60 focus:bg-accent/10 transition-colors"
                     placeholder="Your name"
                   />
                 </div>
@@ -113,7 +112,7 @@ export function ConsultationForm() {
                     required
                     type="text"
                     name="business"
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent/50 transition-colors"
+                    className="w-full bg-accent/5 border border-accent/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent/60 focus:bg-accent/10 transition-colors"
                     placeholder="Venue name"
                   />
                 </div>
@@ -126,7 +125,7 @@ export function ConsultationForm() {
                 <select
                   required
                   name="venueType"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent/50 transition-colors appearance-none"
+                  className="w-full bg-accent/5 border border-accent/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent/60 focus:bg-accent/10 transition-colors appearance-none"
                 >
                   <option value="" className="bg-black">
                     Select venue type
@@ -146,7 +145,7 @@ export function ConsultationForm() {
                     required
                     type="email"
                     name="email"
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent/50 transition-colors"
+                    className="w-full bg-accent/5 border border-accent/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent/60 focus:bg-accent/10 transition-colors"
                     placeholder="you@venue.com"
                   />
                 </div>
@@ -156,7 +155,7 @@ export function ConsultationForm() {
                     required
                     type="tel"
                     name="phone"
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent/50 transition-colors"
+                    className="w-full bg-accent/5 border border-accent/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent/60 focus:bg-accent/10 transition-colors"
                     placeholder="(555) 000-0000"
                   />
                 </div>
@@ -169,7 +168,7 @@ export function ConsultationForm() {
                   </label>
                   <select
                     name="ticketing"
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent/50 transition-colors appearance-none"
+                    className="w-full bg-accent/5 border border-accent/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent/60 focus:bg-accent/10 transition-colors appearance-none"
                   >
                     <option value="" className="bg-black">
                       Select system
@@ -187,7 +186,7 @@ export function ConsultationForm() {
                   </label>
                   <select
                     name="membership"
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent/50 transition-colors appearance-none"
+                    className="w-full bg-accent/5 border border-accent/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent/60 focus:bg-accent/10 transition-colors appearance-none"
                   >
                     <option value="" className="bg-black">
                       Select status
@@ -209,8 +208,8 @@ export function ConsultationForm() {
                   required
                   name="challenge"
                   rows={3}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent/50 transition-colors resize-none"
-                  placeholder="What's your biggest operational or revenue challenge?"
+                  className="w-full bg-accent/5 border border-accent/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent/60 focus:bg-accent/10 transition-colors resize-none"
+                  placeholder="What would make the biggest difference for your venue right now?"
                 />
               </div>
 
@@ -221,7 +220,7 @@ export function ConsultationForm() {
                 <input
                   type="text"
                   name="preferredTime"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent/50 transition-colors"
+                  className="w-full bg-accent/5 border border-accent/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent/60 focus:bg-accent/10 transition-colors"
                   placeholder="e.g., Weekday mornings, Tuesday afternoons"
                 />
               </div>
@@ -232,7 +231,7 @@ export function ConsultationForm() {
                 size="lg"
                 className="w-full mt-2"
               >
-                Book My Consultation
+                Contact Us
               </Button>
             </form>
           )}

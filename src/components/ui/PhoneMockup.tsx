@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 
 export type ScreenType =
@@ -9,10 +11,7 @@ export type ScreenType =
   | "rewards"
   | "splash";
 
-const screenImages: Record<
-  ScreenType,
-  { src: string; alt: string }
-> = {
+const screenImages: Record<ScreenType, { src: string; alt: string }> = {
   discover: {
     src: "/screenshots/home.png",
     alt: "OnQ app home screen showing featured venues in New York",
@@ -47,14 +46,17 @@ const sizes = {
   sm: "w-[150px]",
   md: "w-[200px]",
   lg: "w-[260px]",
+  xl: "w-[300px]",
 };
 
 interface PhoneMockupProps {
   screen: ScreenType;
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "xl";
   className?: string;
   eager?: boolean;
   glow?: boolean;
+  /** Extra 3D tilt — default angled presentation */
+  tilted?: boolean;
 }
 
 export function PhoneMockup({
@@ -63,6 +65,7 @@ export function PhoneMockup({
   className,
   eager = false,
   glow = false,
+  tilted = true,
 }: PhoneMockupProps) {
   const { src, alt } = screenImages[screen];
 
@@ -70,24 +73,49 @@ export function PhoneMockup({
     <div
       className={cn(
         "relative transition-transform duration-500",
-        glow
-          ? "drop-shadow-[0_0_40px_rgba(126,226,240,0.25),0_30px_60px_rgba(0,0,0,0.6)]"
-          : "drop-shadow-[0_20px_40px_rgba(0,0,0,0.55)]",
         sizes[size],
         className
       )}
+      style={{ perspective: "1400px" }}
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={src}
-        alt={alt}
-        width={390}
-        height={844}
-        loading={eager ? "eager" : "lazy"}
-        decoding="async"
-        className="w-full h-auto rounded-[2rem]"
-      />
-      <div className="absolute inset-0 rounded-[2rem] ring-1 ring-inset ring-white/10 pointer-events-none" />
+      <div
+        className={cn(
+          "relative phone-3d",
+          tilted && "phone-3d-tilted",
+          glow && "phone-3d-glow"
+        )}
+      >
+        {/* Depth / floor shadow */}
+        <div className="phone-3d-shadow" aria-hidden="true" />
+
+        {/* Device body */}
+        <div className="phone-3d-body">
+          {/* Side thickness edge */}
+          <div className="phone-3d-edge" aria-hidden="true" />
+
+          {/* Outer bezel */}
+          <div className="phone-3d-bezel">
+            {/* Dynamic Island */}
+            <div className="phone-3d-island" aria-hidden="true" />
+
+            {/* Screen */}
+            <div className="phone-3d-screen">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={src}
+                alt={alt}
+                width={390}
+                height={844}
+                loading={eager ? "eager" : "lazy"}
+                decoding="async"
+                className="block w-full h-auto"
+              />
+              {/* Glass specular */}
+              <div className="phone-3d-glass" aria-hidden="true" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,15 +1,14 @@
 const footerLinks = {
-  Product: [
-    { label: "For Guests", href: "/#consumers" },
-    { label: "For Venues", href: "/#venues" },
+  Guests: [
     { label: "Memberships", href: "/#memberships" },
-    { label: "AI Marketing", href: "/#compare" },
+    { label: "Exclusive Access", href: "/#exclusive" },
+    { label: "Pop-up Events", href: "/#events" },
+    { label: "Contact Us", href: "/#contact" },
+    { label: "Download", href: "/#download" },
   ],
-  Company: [
-    { label: "About", href: "/#" },
-    { label: "Careers", href: "/#" },
-    { label: "Press", href: "/#" },
-    { label: "Contact", href: "/#consultation" },
+  Venues: [
+    { label: "For Venues", href: "/venues" },
+    { label: "Contact Us", href: "/venues#consultation" },
   ],
   Legal: [
     { label: "Privacy Policy", href: "/privacy-policy" },
@@ -20,30 +19,31 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-black pt-16 pb-8">
-      <div className="max-w-7xl mx-auto px-6">
+    <footer className="border-t border-accent/20 bg-[#02080c] pt-16 pb-8 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(109,221,235,0.1),transparent_55%)] pointer-events-none" />
+      <div className="max-w-7xl mx-auto px-6 relative">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           <div className="lg:col-span-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/logo.png"
               alt="OnQ"
-              width={120}
-              height={40}
-              className="h-10 w-auto mb-6"
+              width={140}
+              height={46}
+              className="h-11 w-auto mb-6"
             />
             <p className="text-muted text-sm leading-relaxed max-w-sm mb-6">
-              The operating system for nightlife. One app connecting guests,
-              members, promoters, and venues in one seamless ecosystem.
+              Access Reserved. Exclusive membership—always on the list. A
+              lifestyle brand that keeps you active day and night.
             </p>
             <p className="text-accent text-sm font-medium tracking-wide">
-              One App. Every Night Out.
+              Always on the list
             </p>
           </div>
 
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h4 className="font-[family-name:var(--font-syne)] text-sm font-bold mb-4">
+              <h4 className="font-[family-name:var(--font-display)] text-sm font-semibold mb-4">
                 {category}
               </h4>
               <ul className="space-y-3">
@@ -62,7 +62,7 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="border-t border-accent/15 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted">
             &copy; {new Date().getFullYear()} OnQ. All rights reserved.
           </p>

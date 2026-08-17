@@ -52,7 +52,7 @@ export function ConsumerExperience() {
   const activeFeature = features.find((f) => f.id === active)!;
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="experience" className="py-24 relative overflow-hidden scroll-mt-28">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(126,226,240,0.06),transparent_70%)]" />
 
       <div className="max-w-7xl mx-auto px-6 relative">
@@ -63,7 +63,7 @@ export function ConsumerExperience() {
           className="text-center mb-16"
         >
           <p className="text-accent text-sm tracking-[0.2em] uppercase mb-4">
-            Consumer App
+            Inside the App
           </p>
           <h2 className="font-[family-name:var(--font-syne)] text-3xl md:text-5xl font-bold">
             Everything You Need for the{" "}
