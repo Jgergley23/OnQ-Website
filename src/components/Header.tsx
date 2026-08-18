@@ -8,13 +8,13 @@ import { Button } from "./ui/Button";
 const guestLinks = [
   { label: "Memberships", href: "/#memberships" },
   { label: "Exclusive", href: "/#exclusive" },
-  { label: "Events", href: "/#events" },
+  { label: "Events", href: "/events" },
   { label: "Contact", href: "/#contact" },
 ];
 
 const venueLinks = [
   { label: "For Guests", href: "/" },
-  { label: "Contact", href: "/venues#consultation" },
+  { label: "Book a Demo", href: "/venues#consultation" },
 ];
 
 export function Header() {
@@ -76,15 +76,23 @@ export function Header() {
           </a>
 
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {navLinks.map((link) => {
+              const isActive =
+                link.href === "/events" && pathname?.startsWith("/events");
+              return (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-muted hover:text-accent transition-colors duration-300"
+                className={`text-sm transition-colors duration-300 ${
+                  isActive
+                    ? "text-accent"
+                    : "text-muted hover:text-accent"
+                }`}
               >
                 {link.label}
               </a>
-            ))}
+              );
+            })}
             {!isVenues && (
               <a
                 href="/venues"
@@ -98,7 +106,7 @@ export function Header() {
           <div className="hidden md:flex items-center gap-3">
             {isVenues ? (
               <Button variant="primary" size="sm" href="/venues#consultation">
-                Contact Us
+                Book a Demo
               </Button>
             ) : (
               <>
@@ -167,7 +175,7 @@ export function Header() {
                         href="/venues#consultation"
                         onClick={() => setMobileOpen(false)}
                       >
-                        Contact Us
+                        Book a Demo
                       </Button>
                     ) : (
                       <>

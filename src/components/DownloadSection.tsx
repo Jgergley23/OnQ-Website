@@ -30,7 +30,7 @@ export function DownloadSection() {
               entry in one place.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6">
+            <div className="flex justify-center lg:justify-start mb-6">
               <a
                 href="#"
                 className="inline-flex items-center gap-3 glass-strong rounded-2xl px-6 py-4 hover:bg-accent/15 hover:border-accent/40 transition-all duration-300 group"
@@ -49,29 +49,10 @@ export function DownloadSection() {
                   </p>
                 </div>
               </a>
-
-              <a
-                href="#"
-                className="inline-flex items-center gap-3 glass-strong rounded-2xl px-6 py-4 hover:bg-accent/15 hover:border-accent/40 transition-all duration-300 group"
-              >
-                <svg
-                  className="w-8 h-8"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M3.609 1.814L13.792 12 3.61 22.186a1.326 1.326 0 01-.357-.774V2.588c0-.299.125-.573.357-.774zm2.983 20.365l9.447-9.447-2.474-2.474-7.033 7.033a.796.796 0 00-.23.559v.329a.794.794 0 00.29.559zm11.878-9.447L6.592 1.814l7.033 7.033 2.474-2.474 1.371 1.371zM17.408 1.814a1.326 1.326 0 01.357.774v18.824c0 .299-.125.573-.357.774L6.592 12l10.816-10.186z" />
-                </svg>
-                <div className="text-left">
-                  <p className="text-[10px] text-muted">Get it on</p>
-                  <p className="text-sm font-semibold group-hover:text-accent transition-colors">
-                    Google Play
-                  </p>
-                </div>
-              </a>
             </div>
 
             <Button variant="ghost" href="#contact">
-              Or book a demo →
+              Or contact us →
             </Button>
           </motion.div>
 

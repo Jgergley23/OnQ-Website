@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Sparkles, CalendarDays, Zap, Crown } from "lucide-react";
 import { Button } from "./ui/Button";
+import { MembershipCard } from "./MembershipCard";
 
 const perks = [
   {
@@ -95,20 +96,17 @@ export function Memberships() {
             viewport={{ once: true }}
             className="flex flex-col items-center"
           >
-            <div className="relative w-full max-w-md">
-              <div className="absolute inset-0 bg-accent/15 blur-[90px] rounded-full" />
+            <div className="relative w-full max-w-lg">
+              <div
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[50%] bg-accent/25 blur-[70px] rounded-full pointer-events-none"
+                aria-hidden="true"
+              />
               <motion.div
-                animate={{ y: [0, -10, 0] }}
+                animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                className="relative z-10"
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/membership-card.png"
-                  alt="OnQ exclusive membership card"
-                  width={476}
-                  height={308}
-                  className="relative w-full h-auto drop-shadow-[0_25px_50px_rgba(0,0,0,0.55)]"
-                />
+                <MembershipCard />
               </motion.div>
             </div>
             <p className="text-muted text-sm mt-6 text-center max-w-xs">

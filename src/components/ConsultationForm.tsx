@@ -49,14 +49,14 @@ export function ConsultationForm() {
           className="text-center mb-12"
         >
           <p className="text-accent text-sm tracking-[0.25em] uppercase mb-4">
-            Venue Contact
+            Book a Demo
           </p>
           <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-5xl font-semibold mb-4">
-            Contact{" "}
-            <span className="gradient-text italic">Us</span>
+            Book a{" "}
+            <span className="gradient-text italic">demo</span>
           </h2>
           <p className="text-muted text-lg">
-            Tell us about your venue. We&apos;ll set a short meeting and show
+            Tell us about your venue. We&apos;ll set a short demo and show
             what fits—including Brand Pilot if you want marketing support.
           </p>
         </motion.div>
@@ -85,10 +85,10 @@ export function ConsultationForm() {
                 </svg>
               </div>
               <h3 className="font-[family-name:var(--font-display)] text-2xl font-semibold mb-2">
-                Message sent
+                Demo requested
               </h3>
               <p className="text-muted">
-                Our team will reach out within 24 hours.
+                Our team will reach out within 24 hours to lock in a time.
               </p>
             </div>
           ) : (
@@ -215,7 +215,7 @@ export function ConsultationForm() {
 
               <div>
                 <label className="block text-sm text-muted mb-2">
-                  Preferred Consultation Time
+                  Preferred Demo Time
                 </label>
                 <input
                   type="text"
@@ -231,7 +231,7 @@ export function ConsultationForm() {
                 size="lg"
                 className="w-full mt-2"
               >
-                Contact Us
+                Book a Demo
               </Button>
             </form>
           )}

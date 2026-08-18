@@ -7,11 +7,11 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   title: "For Venues — OnQ",
   description:
-    "Fill more nights and grow revenue with memberships, tickets, and VIP booking. Book a meeting with OnQ.",
+    "Fill more nights and grow revenue with memberships, tickets, and VIP booking. Book a demo with OnQ.",
   openGraph: {
     title: "For Venues — OnQ",
     description:
-      "Fill more nights and grow revenue with memberships, tickets, and VIP booking. Book a meeting with OnQ.",
+      "Fill more nights and grow revenue with memberships, tickets, and VIP booking. Book a demo with OnQ.",
     url: "/venues",
   },
 };

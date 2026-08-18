@@ -24,7 +24,7 @@ export function VenueTeaser() {
           </h2>
           <p className="text-muted text-lg mb-8 max-w-xl mx-auto">
             Partner with OnQ for memberships, tickets, and VIP—plus Brand Pilot
-            marketing when you&apos;re ready. Book a short conversation with our
+            marketing when you&apos;re ready. Book a demo with our
             team.
           </p>
           <Button variant="secondary" size="lg" href="/venues">

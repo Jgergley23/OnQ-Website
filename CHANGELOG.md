@@ -1,5 +1,53 @@
 # Changelog
 
+## 2026-08-18 — Venues CTA: Book a Demo
+
+**What changed:** Venue page CTAs, form, header, and footer now say Book a Demo (home stays Contact Us).
+
+**Why:** Demos are for venues; Contact Us is for members.
+
+**Files touched:** `VenuePitch.tsx`, `ConsultationForm.tsx`, `Header.tsx`, `Footer.tsx`, `VenueTeaser.tsx`, `MEMORY.md`
+
+## 2026-08-18 — Events page (empty for now)
+
+**What changed:** Added `/events` with upcoming events from `src/data/events.ts`. List is empty until populated; empty state explains none are scheduled. Header/Footer Events links point to the page.
+
+**Why:** Events should be their own page, not a homepage anchor.
+
+**Files touched:** `src/app/events/page.tsx`, `UpcomingEvents.tsx`, `src/data/events.ts`, `Header.tsx`, `Footer.tsx`, `MEMORY.md`
+
+## 2026-08-18 — Remove Google Play download
+
+**What changed:** Download section now shows App Store only.
+
+**Why:** OnQ is not on Google Play.
+
+**Files touched:** `DownloadSection.tsx`, `MEMORY.md`
+
+## 2026-08-18 — Home CTAs: Contact Us (not demo)
+
+**What changed:** Replaced consumer “Book a Demo” language with Contact Us across Hero, Download section, and ConsumerContact form (copy + submit button + success state).
+
+**Why:** Homepage is for app users buying memberships—demos are for venues only.
+
+**Files touched:** `Hero.tsx`, `DownloadSection.tsx`, `ConsumerContact.tsx`, `MEMORY.md`
+
+## 2026-08-17 — Hero uses splash loading screen
+
+**What changed:** Hero right side now shows the 3D iPhone with the OnQ splash/loading screen (logo + Enter) instead of the membership card.
+
+**Why:** Brand the first viewport with the app loading experience.
+
+**Files touched:** `src/components/Hero.tsx`
+
+## 2026-08-17 — Crisp membership card
+
+**What changed:** Replaced the soft/blurry membership PNG with a sharp CSS `MembershipCard` component. Removed 3D tilt and shine overlay that were softening the hero card.
+
+**Why:** Source card image was low-res and looked blurred on the site.
+
+**Files touched:** `src/components/MembershipCard.tsx`, `Hero.tsx`, `Memberships.tsx`
+
 ## 2026-08-16 — Sitewide Q cyan color pass
 
 **What changed:** Tuned the design system to the logo Q cyan (`#6DDDEB`) across backgrounds, glass surfaces, borders, buttons, section washes, header/footer, and forms.

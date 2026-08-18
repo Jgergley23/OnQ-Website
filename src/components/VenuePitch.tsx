@@ -69,7 +69,7 @@ export function VenuePitch() {
             transition={{ delay: 0.35 }}
           >
             <Button variant="primary" size="lg" href="#consultation">
-              Contact Us
+              Book a Demo
             </Button>
           </motion.div>
         </div>
@@ -131,7 +131,7 @@ export function VenuePitch() {
               your demo, not dump it on the page.
             </p>
             <Button variant="primary" href="#consultation">
-              Contact Us
+              Book a Demo
             </Button>
           </motion.div>
         </div>

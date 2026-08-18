@@ -2,13 +2,13 @@ const footerLinks = {
   Guests: [
     { label: "Memberships", href: "/#memberships" },
     { label: "Exclusive Access", href: "/#exclusive" },
-    { label: "Pop-up Events", href: "/#events" },
+    { label: "Events", href: "/events" },
     { label: "Contact Us", href: "/#contact" },
     { label: "Download", href: "/#download" },
   ],
   Venues: [
     { label: "For Venues", href: "/venues" },
-    { label: "Contact Us", href: "/venues#consultation" },
+    { label: "Book a Demo", href: "/venues#consultation" },
   ],
   Legal: [
     { label: "Privacy Policy", href: "/privacy-policy" },

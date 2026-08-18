@@ -9,11 +9,14 @@ OnQ is a balanced lifestyle membership brand—exclusive access day and night. G
 - Positioning: lifestyle membership that keeps you active day and night; exclusive members who go to events and create experiences
 - Member pillars: Exclusive Access, Pop-up Events, Fast Entry
 - Download CTA line: **Your next membership starts here**
-- CTAs (home): Book a Demo + Download the App
+- CTAs (home): Contact Us + Download the App
+- CTAs (venues): Book a Demo
+- App download: App Store only (no Google Play)
 
 ## Site structure
 - `/` — Consumer homepage. Memberships first. Membership card visual. Consumer Contact Us. No venue revenue charts, no “Why OnQ Wins.”
-- `/venues` — Venue page. Light pitch + Contact Us. Brand Pilot / AI marketing mentioned only as demo add-on—not a full marketing product tour on the page.
+- `/events` — Upcoming events list (`src/data/events.ts`). Empty until populated; shows “No upcoming events.”
+- `/venues` — Venue page. Light pitch + Book a Demo. Brand Pilot / AI marketing mentioned only as demo add-on—not a full marketing product tour on the page.
 
 ## Design
 - Dark nightlife aesthetic, cyan accent (`#7ee2f0`)

@@ -27,12 +27,12 @@ export function ConsumerContact() {
             Contact Us
           </p>
           <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl font-semibold mb-4">
-            Book a{" "}
-            <span className="gradient-text italic">demo</span>
+            Get in{" "}
+            <span className="gradient-text italic">touch</span>
           </h2>
           <p className="text-muted text-lg">
-            Want the membership walkthrough? Tell us a little about yourself and
-            we&apos;ll set up a short demo.
+            Questions about memberships? Tell us a little about yourself and
+            we&apos;ll get back to you.
           </p>
         </motion.div>
 
@@ -60,10 +60,10 @@ export function ConsumerContact() {
                 </svg>
               </div>
               <h3 className="font-[family-name:var(--font-display)] text-2xl font-semibold mb-2">
-                Demo requested
+                Message sent
               </h3>
               <p className="text-muted">
-                We&apos;ll reach out within 24 hours to lock in a time.
+                We&apos;ll reach out within 24 hours.
               </p>
             </div>
           ) : (
@@ -117,7 +117,7 @@ export function ConsumerContact() {
                 size="lg"
                 className="w-full mt-2"
               >
-                Book My Demo
+                Contact Us
               </Button>
             </form>
           )}
