@@ -26,5 +26,7 @@ OnQ is a balanced lifestyle membership brand—exclusive access day and night. G
 - Membership card asset: `/membership-card.png` (transparent background)
 
 ## Deploy
-- GitHub: `Jgergley23/OnQ-Website`
-- Phase One Vercel: `onq-website`
+- Production domain: **https://onqhospitality.com**
+- GitHub (production): `Jgergley23/onq-website26` — this is what Vercel auto-deploys for hospitality
+- Vercel project: `onq-website26` under **jgergley23s-projects** (not Phase One CLI)
+- Secondary / Phase One sandbox: GitHub `Jgergley23/OnQ-Website` → Vercel Phase One `onq-website` (onq.app) — do not treat as hospitality production

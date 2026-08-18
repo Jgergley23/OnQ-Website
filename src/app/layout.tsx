@@ -15,7 +15,7 @@ const display = Cormorant_Garamond({
 });
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://onq.app";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://onqhospitality.com";
 
 const title = "OnQ — Access Reserved";
 const description =

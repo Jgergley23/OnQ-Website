@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-08-18 — Point production at onqhospitality.com
+
+**What changed:** Default site URL set to `https://onqhospitality.com`. Git remote aligned to `Jgergley23/onq-website26` (the repo Vercel deploys for hospitality). Documented that Phase One `onq-website` / `onq.app` is not hospitality production.
+
+**Why:** Live hospitality domain is served by `onq-website26`, not the Phase One sandbox project.
+
+**Files touched:** `src/app/layout.tsx`, `MEMORY.md`
+
 ## 2026-08-18 — Venues CTA: Book a Demo
 
 **What changed:** Venue page CTAs, form, header, and footer now say Book a Demo (home stays Contact Us).
